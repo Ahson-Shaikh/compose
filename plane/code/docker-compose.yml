@@ -41,7 +41,7 @@ x-app-env: &app-env
     - LIVE_BASE_PATH=${LIVE_BASE_URL}
     # RabbitMQ Settings for RabbitMQ Image
     - RABBITMQ_DEFAULT_USER=${RABBITMQ_USER:-plane}
-    - RABBITMQ_PASSWORD=${RABBITMQ_PASSWORD:-plane}
+    - RABBITMQ_DEFAULT_PASS=${RABBITMQ_PASSWORD:-plane}
     - RABBITMQ_DEFAULT_VHOST=${RABBITMQ_VHOST:-plane}
     # RabbitMQ Settings for Services
     - RABBITMQ_HOST=${RABBITMQ_HOST:-plane-mq}
