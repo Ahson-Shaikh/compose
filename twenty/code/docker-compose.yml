@@ -33,6 +33,7 @@ services:
       STORAGE_S3_ENDPOINT: ${STORAGE_S3_ENDPOINT}
 
       APP_SECRET: ${APP_SECRET}
+      IS_MULTIWORKSPACE_ENABLED: ${IS_MULTIWORKSPACE_ENABLED}
     depends_on:
       change-vol-ownership:
         condition: service_completed_successfully
@@ -53,7 +54,7 @@ services:
       SERVER_URL: ${SERVER_URL}
       FRONT_BASE_URL: ${FRONT_BASE_URL:-$SERVER_URL}
       REDIS_URL: ${REDIS_URL:-redis://redis:6379}
-
+      IS_MULTIWORKSPACE_ENABLED: ${IS_MULTIWORKSPACE_ENABLED}
       ENABLE_DB_MIGRATIONS: "false" # it already runs on the server
 
       STORAGE_TYPE: ${STORAGE_TYPE}
