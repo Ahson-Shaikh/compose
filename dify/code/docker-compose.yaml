@@ -707,7 +707,7 @@ services:
       - api
       - web
     ports:
-      - '${NGINX_PORT:-80}'
+      - '80:80'
 
   # The Weaviate vector store.
   weaviate:
