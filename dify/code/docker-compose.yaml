@@ -707,7 +707,7 @@ services:
       - api
       - web
     ports:
-      - '80:80'
+      - '80'
 
   # The Weaviate vector store.
   weaviate:
