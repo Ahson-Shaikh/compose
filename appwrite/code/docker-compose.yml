@@ -868,13 +868,11 @@ services:
     image: redis:7.2.4-alpine
     <<: *x-logging
     restart: unless-stopped
-    command: >
-      redis-server --maxmemory            512mb
-      --maxmemory-policy     allkeys-lru --maxmemory-samples    5
+    command: ["redis-server", "--appendonly", "yes"]
     networks:
       - appwrite
     volumes:
-      - appwrite-redis:/data:rw
+      - appwrite-redis:/data
   # clamav:
   #   image: appwrite/clamav:1.2.0
   #   container_name: appwrite-clamav
