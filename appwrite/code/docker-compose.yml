@@ -26,6 +26,8 @@ services:
     networks:
       - gateway
       - appwrite
+    ports:
+      - 5000:80
 
   appwrite:
     image: appwrite/appwrite:1.6.2
