@@ -8,7 +8,7 @@ else
     cd ..
 fi
 
-cp -r ./repo/deploy/selfhost/. ./code
-mv ./code/variables.env ./code/.env.example
+rsync -av --exclude='.git' ./repo/  ./code/
+rm -rf ./repo
 
 
